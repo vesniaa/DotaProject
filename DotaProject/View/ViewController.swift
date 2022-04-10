@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var heroes = [Hero]()
     
@@ -16,6 +16,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView.delegate = self
         collectionView.dataSource = self
         
         let url = URL(string: "https://api.opendota.com/api/heroStats")
@@ -32,6 +33,10 @@ class ViewController: UIViewController, UICollectionViewDataSource {
                 }
             }
         }.resume()
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -51,6 +56,10 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         cell.imageView.contentMode = .scaleToFill
         return cell
         
+    }
+    func collectionView(_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellWidth = collectionView.frame.size.width
+        return CGSize(width: cellWidth, height: cellWidth * 0.3)
     }
     
 }
