@@ -15,6 +15,7 @@
 		8C4C64822803560D006DC0EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4C64802803560D006DC0EA /* LaunchScreen.storyboard */; };
 		8C4C648A28035944006DC0EA /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4C648928035944006DC0EA /* CustomCollectionViewCell.swift */; };
 		8C4C648C28035A0B006DC0EA /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4C648B28035A0B006DC0EA /* Hero.swift */; };
+		8C4C648E28036A35006DC0EA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4C648D28036A35006DC0EA /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8C4C64832803560D006DC0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C4C648928035944006DC0EA /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C4C648B28035A0B006DC0EA /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		8C4C648D28036A35006DC0EA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,58 @@
 		8C4C647428035607006DC0EA /* DotaProject */ = {
 			isa = PBXGroup;
 			children = (
-				8C4C648B28035A0B006DC0EA /* Hero.swift */,
-				8C4C648928035944006DC0EA /* CustomCollectionViewCell.swift */,
-				8C4C647528035607006DC0EA /* AppDelegate.swift */,
-				8C4C647728035607006DC0EA /* SceneDelegate.swift */,
-				8C4C647928035607006DC0EA /* ViewController.swift */,
-				8C4C647B28035607006DC0EA /* Main.storyboard */,
+				8C4C649028036AED006DC0EA /* Models */,
+				8C4C648F28036AE2006DC0EA /* Network */,
+				8C4C649228036B28006DC0EA /* Controller */,
+				8C4C649128036B15006DC0EA /* AppDelegate */,
+				8C4C649328036B3A006DC0EA /* Storyboards */,
 				8C4C647E2803560D006DC0EA /* Assets.xcassets */,
-				8C4C64802803560D006DC0EA /* LaunchScreen.storyboard */,
 				8C4C64832803560D006DC0EA /* Info.plist */,
 			);
 			path = DotaProject;
+			sourceTree = "<group>";
+		};
+		8C4C648F28036AE2006DC0EA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8C4C648D28036A35006DC0EA /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8C4C649028036AED006DC0EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8C4C648B28035A0B006DC0EA /* Hero.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8C4C649128036B15006DC0EA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				8C4C647528035607006DC0EA /* AppDelegate.swift */,
+				8C4C647728035607006DC0EA /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		8C4C649228036B28006DC0EA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8C4C648928035944006DC0EA /* CustomCollectionViewCell.swift */,
+				8C4C647928035607006DC0EA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8C4C649328036B3A006DC0EA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8C4C647B28035607006DC0EA /* Main.storyboard */,
+				8C4C64802803560D006DC0EA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C4C648E28036A35006DC0EA /* NetworkManager.swift in Sources */,
 				8C4C648C28035A0B006DC0EA /* Hero.swift in Sources */,
 				8C4C647A28035607006DC0EA /* ViewController.swift in Sources */,
 				8C4C647628035607006DC0EA /* AppDelegate.swift in Sources */,
