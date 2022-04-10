@@ -65,6 +65,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="PRj-yh-ti4" id="q3m-4B-eSh"/>
+                                            <outlet property="namelabel" destination="a4s-ug-Oz5" id="ENN-t9-OI2"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -78,10 +82,13 @@
                             <constraint firstItem="Gpc-KA-7Mn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="g6Z-Ub-oAw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Gpc-KA-7Mn" id="wan-0Q-qYY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
+            <point key="canvasLocation" x="-981" y="56"/>
         </scene>
     </scenes>
     <resources>
