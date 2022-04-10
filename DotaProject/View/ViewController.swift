@@ -8,9 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource {
-
+    
     var heroes = [Hero]()
-
+    
     @IBOutlet var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -50,8 +50,8 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         cell.imageView.layer.cornerRadius = cell.imageView.frame.height / 2
         cell.imageView.contentMode = .scaleToFill
         return cell
-
-  }
+        
+    }
     
 }
 
@@ -64,7 +64,7 @@ extension UIImageView {
                 let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
                 let data = data, error == nil,
                 let image = UIImage(data: data)
-                else { return }
+            else { return }
             DispatchQueue.main.async() { [weak self] in
                 self?.image = image
             }

@@ -22,7 +22,7 @@ class NetworkController {
                                body: Data? = nil,
                                completion: ((Data?, Error?) -> Void)? = nil) {
         
-
+        
         let requestURL = self.url(byAdding: urlParams, to: url)
         var request = URLRequest(url: requestURL)
         request.httpMethod = httpMethod.rawValue
@@ -34,7 +34,7 @@ class NetworkController {
         }
         dataTask.resume()
     }
-                            
+    
     
     static func url(byAdding params: [String: String]? , to url: URL) -> URL {
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
