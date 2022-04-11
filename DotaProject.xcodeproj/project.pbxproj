@@ -63,8 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				8C4C649028036AED006DC0EA /* Models */,
-				8C4C648F28036AE2006DC0EA /* Network */,
-				8C4C649228036B28006DC0EA /* View */,
+				8C4C648F28036AE2006DC0EA /* Services */,
+				8C4C649228036B28006DC0EA /* ViewControllers */,
 				8C4C649128036B15006DC0EA /* AppDelegate */,
 				8C4C649328036B3A006DC0EA /* Storyboards */,
 				8C4C647E2803560D006DC0EA /* Assets.xcassets */,
@@ -73,12 +73,12 @@
 			path = DotaProject;
 			sourceTree = "<group>";
 		};
-		8C4C648F28036AE2006DC0EA /* Network */ = {
+		8C4C648F28036AE2006DC0EA /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				8C4C648D28036A35006DC0EA /* NetworkManager.swift */,
 			);
-			path = Network;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		8C4C649028036AED006DC0EA /* Models */ = {
@@ -98,13 +98,13 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		8C4C649228036B28006DC0EA /* View */ = {
+		8C4C649228036B28006DC0EA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				8C4C648928035944006DC0EA /* CustomCollectionViewCell.swift */,
 				8C4C647928035607006DC0EA /* ViewController.swift */,
 			);
-			path = View;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		8C4C649328036B3A006DC0EA /* Storyboards */ = {

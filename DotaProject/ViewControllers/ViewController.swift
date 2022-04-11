@@ -51,17 +51,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let completeLink = defaultLink + heroes[indexPath.row].img
         
         cell.imageView.downloaded(from: completeLink)
-        cell.imageView.clipsToBounds = true
+      
         cell.imageView.layer.cornerRadius = cell.imageView.frame.height / 2
         cell.imageView.contentMode = .scaleToFill
         return cell
         
     }
-    func collectionView(_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = collectionView.frame.size.width
-        return CGSize(width: cellWidth, height: cellWidth * 0.3)
-    }
-    
 }
 
 extension UIImageView {
