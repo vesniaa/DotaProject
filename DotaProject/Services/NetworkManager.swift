@@ -7,46 +7,36 @@
 
 import Foundation
 
-class NetworkController {
+enum NetworkError: Error {
+    case invalidURL
+    case noData
+    case decodingError
+}
+
+class NetworkManager {
     
-    enum HTTPMethod: String {
-        case get = "GET"
-        case put = "PUT"
-        case post = "POST"
-        case delete = "DELETE"
-    }
+    static let shared = NetworkManager()
     
-    static func performRequest(for url: URL,
-                               httpMethod: HTTPMethod,
-                               urlParams: [String : String]? = nil,
-                               body: Data? = nil,
-                               completion: ((Data?, Error?) -> Void)? = nil) {
+    private init() {}
+    
+    func fetchData(from url: String?, with completion: @escaping(Hero) -> Void) {
+        guard let url = URL(string: url ?? "") else { return }
         
-        
-        let requestURL = self.url(byAdding: urlParams, to: url)
-        var request = URLRequest(url: requestURL)
-        request.httpMethod = httpMethod.rawValue
-        request.httpBody = body
-        
-        let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            completion?(data, error)
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data else {
+                print(error?.localizedDescription ?? "No error description")
+                return
+            }
             
-        }
-        dataTask.resume()
-    }
-    
-    
-    static func url(byAdding params: [String: String]? , to url: URL) -> URL {
-        var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
-        
-        components?.queryItems = params?.compactMap {
-            URLQueryItem(name: $0.key, value: $0.value)
-        }
-        
-        guard let url = components?.url else {
-            fatalError("URL components is nil")
-        }
-        
-        return url
+            do {
+                let hero = try JSONDecoder().decode(Hero.self, from: data)
+                DispatchQueue.main.async {
+                    completion(hero)
+                }
+            } catch let error {
+                print(error)
+            }
+            
+        }.resume()
     }
 }
