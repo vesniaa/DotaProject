@@ -1,3 +1,5 @@
+2.10 урок:
+
 Создайте приложение с использованием любого публичного api.
 
 Важно:
@@ -20,3 +22,7 @@ https://github.com/public-apis/public-apis
 https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/
 
 https://rapidapi.com/collection/list-of-free-apis
+
+
+2.11 урок
+Необходимо вручную распарсить JSON, который вы использовали в прошлом ДЗ
