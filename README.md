@@ -24,5 +24,6 @@ https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/
 https://rapidapi.com/collection/list-of-free-apis
 
 
-2.11 урок
+2.11 урок:
+
 Необходимо вручную распарсить JSON, который вы использовали в прошлом ДЗ
