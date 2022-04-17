@@ -1,5 +1,5 @@
-<img width="323" alt="Снимок экрана 2022-04-17 в 21 39 25" src="https://user-images.githubusercontent.com/62894376/163724012-28f53cc6-1789-4a6e-8891-93fd80e76ae3.png">
-<img width="321" alt="Снимок экрана 2022-04-17 в 21 36 27" src="https://user-images.githubusercontent.com/62894376/163724014-be2147d5-49c1-412f-91ef-9b3747d875be.png">
+<img width="162" alt="Снимок экрана 2022-04-17 в 21 41 16" src="https://user-images.githubusercontent.com/62894376/163724077-5afc1341-059d-4a04-94c3-9b05a60ac9d4.png">
+<img width="134" alt="Снимок экрана 2022-04-17 в 21 40 48" src="https://user-images.githubusercontent.com/62894376/163724071-7ff8f248-2837-4114-be2f-7c287df179f5.png">
 2.10 урок:
 
 Создайте приложение с использованием любого публичного api.
