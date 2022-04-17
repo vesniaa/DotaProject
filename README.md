@@ -27,6 +27,4 @@ https://rapidapi.com/collection/list-of-free-apis
 2.11 урок:
 
 Необходимо вручную распарсить JSON, который вы использовали в прошлом ДЗ
-<img width="321" alt="Снимок экрана 2022-04-17 в 21 36 27" src="https://user-images.githubusercontent.com/62894376/163723885-bf4da5b7-4988-4951-9a29-fa213744fa3f.png">
-![Uploading Снимок экрана 2022-04-17 в 21.36.03.![Uploading Снимок экрана 2022-04-17 в 21.35.44.png…]()
-png…]()
+
