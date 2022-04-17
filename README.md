@@ -1,6 +1,4 @@
-
 <img width="471" alt="Снимок экрана 2022-04-17 в 21 36 03" src="https://user-images.githubusercontent.com/62894376/163723929-d07d31e4-95f3-4fbe-9f9d-608f033ccfd7.png">
-
 <img width="321" alt="Снимок экрана 2022-04-17 в 21 36 27" src="https://user-images.githubusercontent.com/62894376/163723932-9c8f439b-dff9-4c89-9914-60708329d9f5.png">
 
 
