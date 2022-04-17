@@ -29,4 +29,5 @@ https://rapidapi.com/collection/list-of-free-apis
 2.11 урок:
 
 Необходимо вручную распарсить JSON, который вы использовали в прошлом ДЗ
+Alamafire 
 
