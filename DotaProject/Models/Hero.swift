@@ -8,7 +8,7 @@
 import Foundation
 
 struct Hero: Codable {
-    let localizedName: String
+    let localized_name: String
     let img: String
 }
 
