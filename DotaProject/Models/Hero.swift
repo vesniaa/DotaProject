@@ -12,4 +12,8 @@ struct Hero: Decodable {
     let img: String
 }
 
+enum CodingKeys: String, CodingKey {
+    case localized_name = "Localized_name"
+    case img = "Img"
+}
 

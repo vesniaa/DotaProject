@@ -51,12 +51,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let completeLink = defaultLink + heroes[indexPath.row].img
         
         cell.imageView.downloaded(from: completeLink)
-      
         cell.imageView.layer.cornerRadius = cell.imageView.frame.height / 2
         cell.imageView.contentMode = .scaleToFill
         return cell
-        
     }
 }
-
-

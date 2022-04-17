@@ -16,10 +16,24 @@
 		8C4C648A28035944006DC0EA /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4C648928035944006DC0EA /* CustomCollectionViewCell.swift */; };
 		8C4C648C28035A0B006DC0EA /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4C648B28035A0B006DC0EA /* Hero.swift */; };
 		8C4C648E28036A35006DC0EA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4C648D28036A35006DC0EA /* NetworkManager.swift */; };
+		8CF4FD9B280C49C3009C3FC7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8CF4FD9A280C49C3009C3FC7 /* Alamofire */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8CF4FD98280C3EE0009C3FC7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		8C4C647228035607006DC0EA /* DotaProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotaProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C4C647228035607006DC0EA /* DotaProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DotaProject.app; path = "/Users/evgeniaanikina/Documents/lesson 2 swiftbook/DotaProject/build/Debug-iphoneos/DotaProject.app"; sourceTree = "<absolute>"; };
 		8C4C647528035607006DC0EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C4C647728035607006DC0EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8C4C647928035607006DC0EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CF4FD9B280C49C3009C3FC7 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,16 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				8C4C647428035607006DC0EA /* DotaProject */,
-				8C4C647328035607006DC0EA /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		8C4C647328035607006DC0EA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8C4C647228035607006DC0EA /* DotaProject.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		8C4C647428035607006DC0EA /* DotaProject */ = {
@@ -126,12 +132,16 @@
 				8C4C646E28035607006DC0EA /* Sources */,
 				8C4C646F28035607006DC0EA /* Frameworks */,
 				8C4C647028035607006DC0EA /* Resources */,
+				8CF4FD98280C3EE0009C3FC7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = DotaProject;
+			packageProductDependencies = (
+				8CF4FD9A280C49C3009C3FC7 /* Alamofire */,
+			);
 			productName = DotaProject;
 			productReference = 8C4C647228035607006DC0EA /* DotaProject.app */;
 			productType = "com.apple.product-type.application";
@@ -160,7 +170,10 @@
 				Base,
 			);
 			mainGroup = 8C4C646928035607006DC0EA;
-			productRefGroup = 8C4C647328035607006DC0EA /* Products */;
+			packageReferences = (
+				8CF4FD99280C49C3009C3FC7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = 8C4C646928035607006DC0EA;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -412,6 +425,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8CF4FD99280C49C3009C3FC7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8CF4FD9A280C49C3009C3FC7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CF4FD99280C49C3009C3FC7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8C4C646A28035607006DC0EA /* Project object */;
 }

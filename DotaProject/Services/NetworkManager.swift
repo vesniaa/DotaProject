@@ -5,6 +5,7 @@
 //  Created by Евгения Аникина on 11.04.2022.
 //
 
+import Alamofire
 import Foundation
 
 enum NetworkError: Error {
@@ -36,11 +37,9 @@ class NetworkManager {
             } catch let error {
                 print(error)
             }
-            
         }.resume()
     }
 }
-
 
 func fetchImage(from url: String?, with completion: @escaping(Data) -> Void) {
     guard let stringURL = url else { return }
@@ -52,4 +51,5 @@ func fetchImage(from url: String?, with completion: @escaping(Data) -> Void) {
         }
     }
 }
+
 
