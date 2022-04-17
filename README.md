@@ -1,5 +1,5 @@
-<img width="162" alt="Снимок экрана 2022-04-17 в 21 41 16" src="https://user-images.githubusercontent.com/62894376/163724077-5afc1341-059d-4a04-94c3-9b05a60ac9d4.png">
-<img width="134" alt="Снимок экрана 2022-04-17 в 21 40 48" src="https://user-images.githubusercontent.com/62894376/163724071-7ff8f248-2837-4114-be2f-7c287df179f5.png">
+<img width="1104" alt="Снимок экрана 2022-04-17 в 21 42 57" src="https://user-images.githubusercontent.com/62894376/163724133-8325ae48-46e8-48e2-8204-02790fb8182b.png">
+
 2.10 урок:
 
 Создайте приложение с использованием любого публичного api.
