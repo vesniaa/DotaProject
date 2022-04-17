@@ -7,13 +7,9 @@
 
 import Foundation
 
-struct Hero: Decodable {
-    let localized_name: String
+struct Hero: Codable {
+    let localizedName: String
     let img: String
 }
 
-enum CodingKeys: String, CodingKey {
-    case localized_name = "Localized_name"
-    case img = "Img"
-}
 

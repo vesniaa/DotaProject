@@ -20,36 +20,37 @@ class NetworkManager {
     
     private init() {}
     
-    func fetchData(from url: String?, with completion: @escaping(Hero) -> Void) {
-        guard let url = URL(string: url ?? "") else { return }
-        
+    func fetchData(completion: @escaping(Result<[Hero], NetworkError>) -> Void) {
+        guard let url = URL(string: "https://api.opendota.com/api/heroStats") else {
+            completion(.failure(.invalidURL))
+            return
+        }
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
                 print(error?.localizedDescription ?? "No error description")
+                completion(.failure(.noData))
                 return
             }
-            
             do {
-                let hero = try JSONDecoder().decode(Hero.self, from: data)
+                let superheroes = try JSONDecoder().decode([Hero].self, from: data)
                 DispatchQueue.main.async {
-                    completion(hero)
+                    completion(.success(superheroes))
                 }
-            } catch let error {
-                print(error)
+            } catch {
+                completion(.failure(.decodingError))
+            }
+        }.resume()
+    }
+    
+    func fetchImage(from url: URL, completion: @escaping(Result<Data, NetworkError>) -> Void) {
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data else {
+                completion(.failure(.noData))
+                return
+            }
+            DispatchQueue.main.async {
+                completion(.success(data))
             }
         }.resume()
     }
 }
-
-func fetchImage(from url: String?, with completion: @escaping(Data) -> Void) {
-    guard let stringURL = url else { return }
-    guard let imageURL = URL(string: stringURL) else { return }
-    DispatchQueue.global().async {
-        guard let data = try? Data(contentsOf: imageURL) else { return }
-        DispatchQueue.main.async {
-            completion(data)
-        }
-    }
-}
-
-
